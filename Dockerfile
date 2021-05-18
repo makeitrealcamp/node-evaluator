@@ -12,7 +12,7 @@ RUN apt-get -y install nodejs
 RUN curl -o- -L https://yarnpkg.com/install.sh | bash
 RUN echo 'export PATH="$HOME/.yarn/bin:$PATH"' >> /etc/profile.d/yarn.sh
 
-RUN npm install -g http-server mocha sinon chai mongoose
+RUN npm install -g http-server mocha sinon chai mongoose cheerio
 
 RUN curl https://storage.googleapis.com/chromium-browser-snapshots/Linux_x64/526987/chrome-linux.zip --output /tmp/chromium-browser.zip && unzip /tmp/chromium-browser.zip -d /root
 RUN PUPPETEER_SKIP_CHROMIUM_DOWNLOAD=true npm install -g puppeteer@1.6.1
